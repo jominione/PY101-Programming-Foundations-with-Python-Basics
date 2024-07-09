@@ -1,0 +1,9 @@
+# Will the code below raise an error?
+
+numbers = [1, 2, 3]
+numbers[6] = 5
+
+# Yes. The variable numbers is a non-empty list of three elements.
+# By trying to access the 6th index of numbers list you are trying to access an
+# index that does not exist. This will raise an 
+# IndexError: 'list index out of range' exception.

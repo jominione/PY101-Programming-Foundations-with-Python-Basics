@@ -1,0 +1,95 @@
+# How can you determine whether a given string ends with an exclamation 
+# mark (!)? Write some code that prints True or False depending on whether the 
+# string ends with an exclamation mark.
+
+str1 = "Come over here!" # True
+str2 = "What's up, Doc?" # False
+
+print(str1.endswith("!"))
+print(str2.endswith("!"))
+
+
+# input:
+#    string
+
+# output:
+#    boolean
+
+# string:
+#     str1
+#     str2
+
+# boolean:
+#     True
+#     False
+
+# Mental Model:
+# 
+# Slicing string by last character and check if it is
+# an exclamation mark.
+
+# Implicit Requirements:
+# - Input is a string and no other type.
+# - Input is non-empty. If empty then implicitly will be False.
+
+
+# Validation
+# 
+# Example 1
+# 
+# Inputs:
+# 
+# str1 = "Come over here!"
+# 
+# Output:
+# 
+# True
+# 
+# Example 2
+# 
+# Inputs:
+# 
+# str2 = "What's up, Doc?"
+# 
+# Output:
+# 
+# False
+# 
+# Example 3
+# 
+# str3 = ""
+# 
+# Output:
+# 
+# False
+# 
+# Example 4
+# 
+# str4 = ['adfasdfsas']
+# 
+# Output:
+# 
+# False
+# 
+# Data Structure
+# 
+# String -> String -> Boolean
+# 
+# Algorithm
+# 
+# 1. Determine the length of the string. If string empty, return False.
+
+str_len = len(str)
+if str_len == '':
+    print False
+
+# 2. Access the last character using the length as index of string.
+
+last_char = str[len(str)]
+
+# 3. Check if last character equals '!', if so return True, otherwise False.
+
+if last_char == '!'
+    print True
+else:
+    print False
