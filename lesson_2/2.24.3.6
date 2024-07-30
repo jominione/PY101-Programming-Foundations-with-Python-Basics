@@ -1,0 +1,33 @@
+# What will the following code print and why? Don't run it until you have
+# tried to answer.
+
+def my_func():
+    x = 15
+
+    def inner_func1():
+        x = 25
+        print("Inner 1:", x)
+
+    def inner_func2():
+        print("Inner 2:", x)
+
+    inner_func1()
+    inner_func2()
+
+my_func()
+
+# Solution: Will print
+# Inner 1: 25
+# Inner 2: 15
+
+# When my_func is invoked it will invoke inner_func1 and inner_func2. 
+# Within inner_func1 x is initialised and within scope of the print on line 9. 
+# When inner_func2 is invoked, print will look for n initially within its 
+# scope but since x is not defined in inner_func2 it will look for x outside 
+# in the scope of my_func which is defined x = 15.
+
+# Official solution: Inside my_func, a local variable x is initialised to
+# 15. When inner_func1 is called, it defines its own local variable x with
+# a value of 25 and prints "Inner 1: 25". However, when inner_func2 is called,
+# it doesn't have access to the variable x from the inner_func1 as it is in
+# its peer scope but access variable x defined in the scope of my_func.

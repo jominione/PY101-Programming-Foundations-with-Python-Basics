@@ -1,0 +1,26 @@
+# What will the following code print and why? Don't run it until you have
+# tried to answer.
+
+# Example:
+
+def outer():
+    outer_var = 'Hello'
+
+    def inner():
+        inner_var = 'World'
+        print(outer_var, inner_var)
+
+    inner()
+
+outer()
+
+# Solution: Print 'Hello World'. When outer is invoked, it invokes inner
+# function. The inner function calls on both out_var and inner_var which
+# are defined within the local scope of outer and inner functions.
+
+# Official solution: This prints 'Hello World'. The outer() function defines
+# a local variable outer_var witht he value 'Hello'. Inside it, the inner()
+# function is defined, which has its own local variable inner_var with the
+# value 'World'. When inner() is called within outer(), but outer_var and
+# inner_var are printed using print(outer_var, inner_var), which outputs 'Hello
+# World'.

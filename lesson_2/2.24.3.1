@@ -1,0 +1,19 @@
+# What will the following code print and why? Don't run it until you have
+# tried to answer.
+
+# Example:
+
+num = 5
+
+def my_func():
+    print(num)
+
+my_func()
+
+# Solution: Since num is not defined in the function, Python will look for
+# num in its lexical scope which in this case is the global scope. When my_func
+# is called it will output 5.
+
+# Official Solution: This prints 5. The variable num initialised to 5 on line
+# 1 is accessible within the scope of the my_func function. When that function
+# is invoked, 5 is printed.

@@ -1,0 +1,22 @@
+# What will the following code print and why? Don't run it until you have
+# tried to answer.
+
+# Example:
+
+num = 5
+
+def my_func():
+    num = 10
+
+my_func()
+print(num)
+
+# Solution: It will print 5. When my_func is invoked the function initialises
+# num in local scope. This is not accessible outside of the function. So
+# when print is invoked it outputs the value of 5 which is value of num that
+# is accessible to Python at global scope.
+
+# Official solution: This prints 5. The variable num initialised to 5 on line
+# 1 and the avriable num initialised on line 4 within the function my_func
+# are two different variables. We can't reassign variable num initiliased
+# on line 1 within the function.

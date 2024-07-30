@@ -1,0 +1,24 @@
+# What will the following code print and why? Don't run it until you have
+# tried to answer.
+
+# Example:
+
+num = 5
+
+def my_func():
+    global num
+    num = 10
+
+my_func()
+print(num)
+
+# Solution: It will print 10. The global keyword tells Python that the num
+# at line 10 is same as num at line 6 which is global in scope. At line 10
+# num is reassigned to value 10 so when print is invoked it outputs value
+# 10.
+
+# Official solution: This prints 10. The variable num is initialised to 5
+# on line 1. On line 4 we use global keyword inside the function to reference
+# the global variable num initialised on line 1. For that reason, on line
+# 5 we are reassigning global variable num to 10 and on line 8 printing that
+# value.
